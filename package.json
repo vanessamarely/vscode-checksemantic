@@ -2,7 +2,7 @@
   "name": "semantic-checker",
   "displayName": "semantic-checker",
   "description": "An extension to verify semantic HTML checker",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "VanessaAristizabal",
   "engines": {
     "vscode": "^1.96.0"
