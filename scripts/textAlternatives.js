@@ -1,6 +1,5 @@
-// accessibilityDetection.js - Código para detectar problemas de accesibilidad del Criterio 1.
-function detectTextAlternatives(documentText) {
-    const issues = [];
+// detectTextAlternatives.js - code to detect issues of Criterio 1.
+function detectTextAlternatives(documentText, issues) {
 
     // Detect <img> missing alt
     const imgRegex = /<img[^>]*>/g;
@@ -247,7 +246,6 @@ function detectTextAlternatives(documentText) {
         issues.push({ message: "Datalist sin contexto", start: match.index });
     }
 
-    return issues;
 }
 
 module.exports = { detectTextAlternatives };
