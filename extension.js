@@ -4,7 +4,8 @@ const { detectTextAlternatives } = require('./textAlternatives');
 // This function is called when your extension is activated
 function activate(context) {
     console.log('Extension "semantic-checker" is now active.');
-
+    vscode.window.showInformationMessage('Semantic HTML check initiated.');
+    
     let disposable = vscode.commands.registerCommand('extension.checkSemanticHTML', () => {
         const editor = vscode.window.activeTextEditor;
 
