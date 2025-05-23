@@ -13,10 +13,40 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "extension.checkSemanticHTML",
-      "title": "Verify Semantic HTML"
-    }]
+    "commands": [
+      {
+        "command": "extension.checkSemanticHTML",
+        "title": "Verify Semantic HTML"
+      },
+      {
+        "command": "extension.fixSemanticHTML",
+        "title": "Fix Semantic HTML with Copilot"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.checkSemanticHTML",
+        "key": "ctrl+alt+h",
+        "when": "editorLangId == html"
+      },
+      {
+        "command": "extension.fixSemanticHTML",
+        "key": "ctrl+alt+f",
+        "when": "editorLangId == html"
+      },
+      {
+        "command": "extension.checkSemanticHTML",
+        "key": "cmd+option+shift+h",
+        "mac": "true",
+        "when": "editorLangId == html"
+      },
+      {
+        "command": "extension.fixSemanticHTML",
+        "key": "cmd+option+shift+f",
+        "mac": "true",
+        "when": "editorLangId == html"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
